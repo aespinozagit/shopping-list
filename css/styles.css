@@ -8,24 +8,24 @@ body {
 }
 
 .circle-logo {
-	border: 3px solid #787778;
-	width: 1.7em;
-	height: 1.5em;
-	border-radius: 50%;
-	margin: .5em auto 0 auto;
-	background-color: #7CBF94;
-	font-size: 4em;
-	color: white;
-	padding-top: .4em;
-	padding-left: .2em;
+	  border: 3px solid #787778;
+  width: 179px;
+  height: 156px;
+  border-radius: 50%;
+  margin: 0.5em auto 0 auto;
+  background-color: #7CBF94;
+  font-size: 7em;
+  color: white;
+  padding-top: 35px;
+  padding-left: 16px;
 }
 
 #add-input {
 	border: 3px solid #7CBF94;
 	border-radius: 7px;
 	text-align: center;
-	height: 29px;
-	width: 232px;
+	height: 42px;
+	width: 239px;
 	z-index: -1;
 	margin-right: -16px;
 	box-shadow: 2px 4px 5px gray;
@@ -41,7 +41,7 @@ h1 {
 .input-button {
    border: 3px solid white;
    background: #7CBF94;
-   padding: 4.5px 17px;
+   padding: 12.5px 24px;
    border-radius: 50%;
    color: white;
    vertical-align: middle;
@@ -61,33 +61,33 @@ h1 {
 
 
 .main-item-list {
-	margin: 2.5em 62px -35px 0;
+	margin: 2.5em 67px -27px 0;
 }
 
 .show-item {
 	border: 3px solid #7AB3CE;
 	border-radius: 7px;
 	text-align: center;
-	height: 25px;
+	height: 42px;
 	width: 200px;
 	z-index: -4;
 	margin-right: -16px;
 	box-shadow: 2px 4px 5px gray;
 	color: #787778;
-	margin-left: -15px;
+	margin-left: -17px;
 }
 
 /*item-button styles*/
 .items-button {
     border: 3px solid white;
    background: #7AB3CE;
-   padding: 3.5px 11px;
+   padding: 10.5px 17px;
    border-radius: 50%;
    color: white;
    vertical-align: middle;
    font-size: 40px;
    font-weight: 700;
-   box-shadow: 2px 2px 3px gray;
+   box-shadow: -4px 5px 5px gray;
    position: relative;
    }
 
@@ -103,7 +103,7 @@ h1 {
 	border: 3px solid #D27752;
 	border-radius: 7px;
 	text-align: center;
-	height: 25px;
+	height: 42px;
 	width: 200px;
 	z-index: -4;
 	margin-right: -16px;
@@ -117,13 +117,13 @@ h1 {
 .items-button-complete {
     border: 3px solid white;
    background: #D27752;
-   padding: 3.5px 11px;
+   padding: 10.5px 17px;
    border-radius: 50%;
    color: white;
    vertical-align: middle;
    font-size: 40px;
    font-weight: 700;
-   box-shadow: 2px 2px 3px gray;
+   box-shadow: -4px 5px 5px gray;
    position: relative;
    }
 
