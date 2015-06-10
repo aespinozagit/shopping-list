@@ -9,7 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
-	<!-- <script src="js/app.js"></script> -->
+	<script src="js/app.js"></script>
 
 </head>
 <body>
@@ -25,19 +25,44 @@
 
 	<div class="item-input">
 		<input id="add-input" type="text" name="add-item" placeholder="ENTER ITEM HERE" autocomplete="off">
-		<button class="input-button" type="button">+</button>
+		<button class="input-button" name="add-list-item" type="button">+</button>
 	</div>
 
 	<div class="main-item-list">
 		<div class="list-item">
+				<ul>
+					<button class="items-button" type="button"></button>
 
-				<button class="items-button" type="button"><i class="fa fa-circle-o"></i></button>
+					<div class="circle-o">
+					<i class="fa fa-circle-o fa-4x"></i>
+					</div>
+					
+					<div class="complete">
+					<i class="fa fa-ban fa-4x"></i>
+					</div>
+				    <li class="show-item"></li>
+					
+				    <i class="fa fa-trash fa-4x trashcan"></i>
+				</ul>
+				<!-- <ul>
+					<button class="items-button" type="button"><i class="fa fa-circle-o"></i></button>
 
-				<input class="show-item" type="text" name="add-item" value="ITEM 1" autocomplete="off">
+				    <li class="show-item"></li>
+
+				    <i class="fa fa-trash fa-4x trashcan"></i>
+				</ul> -->
+		</div>
+	</div>
+
+	<!-- <div class="main-item-list">
+		<div class="list-item-complete">
+				<button class="items-button-complete" type="button"><i class="fa fa-ban"></i></button>
+
+				<input class="show-item-complete" type="text" name="add-item" value="ITEM 1" autocomplete="off">
 	
 			<i class="fa fa-trash fa-4x trashcan"></i>			
 		</div>
-	</div>
+	</div> -->
 
 </body>
 </html>

@@ -1,48 +1,70 @@
-// $(document).ready(function() {
-//   $('.items').mouseenter(function() {
-//     $('.items-button').hide();
-//     $('.items-button-complete').show();
-//   })
+$(document).ready(function() {
+  $('.input-button').mouseenter(function() {
+    $(this).css('background-color', '#7AB3CE');
+    $('.input-button').css('color', '#787778');
+  })      
 
-//   .mouseleave(function() {
-//     $('.items-button').show();
-//     $('.items-button-complete').hide();
-//   })
+  .mouseleave(function() {
+    $('.input-button').css('background-color', '#7CBF94');
+    $('.input-button').css('color', 'white');
+  })
 
-//   .mousedown(function() {
-//   	//Play hadouken sound
-//   	playHadouken();
-//     //Show hadouken and animate it to the right of the screen
-//   	$('.ryu-ready').hide();
-//   	$('.ryu-throwing').show();
-//     $('.hadouken').finish().show().animate(
-//       {'left': '1020px'}, 500,
-//       function() {
-//         $(this).hide();
-//         $(this).css('left', '520px');
-//       });
-//   })
+  .mousedown(function() {
+  })
 
-//   .mouseup(function() {
-//     //Ryu goes back to his ready position
-//     $('.ryu-ready').show();
-//     $('.ryu-throwing').hide();
-//   });
+  .mouseup(function() {
+  });
+
+    $('.items-button').mouseenter(function() {
+    $(this).css('background-color', '#D27752');
+    $('.circle-o').hide();
+    $('.complete').show();
+    $('.show-item').css('border-color', '#D27752');
+  })      
+
+  .mouseleave(function() {
+    $('.items-button').css('background-color', '#7AB3CE');
+    $('.complete').hide();
+    $('.circle-o').show();
+    $('.show-item').css('border-color', '#7AB3CE');
+  })
+
+  .mousedown(function() {
+
+  })
+
+  .mouseup(function() {
+  });
+
+  $('#add-button').click(function() {
+    if( $('input#add-todo').val().trim().length == 0 ) {
+        // alert("put something here");
+        $('#error').show();
+        $('input#add-todo').val("");
+    } else { 
+
+    $('ul').append('<li class="todo"><button class="item">Done</button>' + $('input#add-todo').val() + '</li>');
+    $('input#add-todo').val("");
+    $('#error').hide();
+
+    };  
+  
+  });
 
 
-//     $(document).keydown(function(e) {
-//     if (e.keyCode == 88) {
-//     	playCool();
-//       $('.ryu-ready').hide();
-//       $('.ryu-still').hide();
-//       $('.ryu-cool').show();
-//     }   
-//   }).keyup(function(e) {
-//     if (e.keyCode == 88) {
-//       $('#cool-sound')[0].pause();
-//       $('#cool-sound')[0].load();
-//       $('.ryu-cool').hide();
-//       $('.ryu-still').show();
-//     }
-//   });
-// });
+    $(document).keydown(function(e) {
+    if (e.keyCode == 88) {
+    	playCool();
+      $('.ryu-ready').hide();
+      $('.ryu-still').hide();
+      $('.ryu-cool').show();
+    }   
+  }).keyup(function(e) {
+    if (e.keyCode == 88) {
+      $('#cool-sound')[0].pause();
+      $('#cool-sound')[0].load();
+      $('.ryu-cool').hide();
+      $('.ryu-still').show();
+    }
+  });
+});
