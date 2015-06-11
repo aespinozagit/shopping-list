@@ -1,7 +1,14 @@
 $(document).ready(function() {
+
+  $(".input-button").click(function(){
+            alert($('#add-input').val());
+            $(".show-item").append($('#add-input'));
+        });
+
   $('.input-button').mouseenter(function() {
     $(this).css('background-color', '#7AB3CE');
     $('.input-button').css('color', '#787778');
+    $('.input-button').css('cursor', 'pointer');
   })      
 
   .mouseleave(function() {
@@ -15,18 +22,38 @@ $(document).ready(function() {
   .mouseup(function() {
   });
 
-    $('.items-button').mouseenter(function() {
+    $('.item-button').mouseenter(function() {
+    $(this).css('cursor', 'pointer');
     $(this).css('background-color', '#D27752');
-    $('.circle-o').hide();
-    $('.complete').show();
     $('.show-item').css('border-color', '#D27752');
-  })      
+    $(this).html('<i class="list-item-complete fa fa-check fa-3x"></i>');
+
+  })    
 
   .mouseleave(function() {
-    $('.items-button').css('background-color', '#7AB3CE');
-    $('.complete').hide();
-    $('.circle-o').show();
+    $('.item-button').css('background-color', '#7AB3CE');
     $('.show-item').css('border-color', '#7AB3CE');
+    $(this).html('<i class="fa fa-bars fa-3x"></i>');
+  })
+
+$('.item-button').click(function() {
+     $(this).css('background-color', '#D27752');
+    $('.show-item').css('border-color', '#D27752');
+    $(this).html('<i class="list-item-complete fa fa-check fa-3x"></i>');
+})
+
+  .mousedown(function() {
+
+  })
+
+  .mouseup(function() {
+  });
+
+  $('.trashcan').mouseenter(function() {
+    $(this).css('cursor', 'pointer');
+  })    
+
+  .mouseleave(function() {
   })
 
   .mousedown(function() {

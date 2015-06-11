@@ -4,28 +4,14 @@ body {
 	font-family: 'Ubuntu', sans-serif;
 }
 
-.logo {
-	background-image: url();
-}
-
-.circle-logo {
-	  border: 3px solid #787778;
-  width: 12rem;
-  height: 10rem;
-  border-radius: 50%;
-  margin: 0.5em auto 0 auto;
-  background-color: #7CBF94;
-  font-size: 7em;
-  color: white;
-  padding-top: 2.5rem;
-  padding-left: 1rem;
-}
-
-
 h1 {
 	margin: -1rem 0 1em 0;
 	color: #787778;
 	font-size: 3em;
+}
+
+.logo {
+	margin-top: 1em;
 }
 /*....................Button styles*/
 /*input-button styles*/
@@ -38,7 +24,7 @@ h1 {
 	height: 3rem;
 	width: 19rem;
 	z-index: -1;
-	margin-right: -2rem;
+	margin: 0px -15px 0px 14px;
 	box-shadow: 2px 4px 5px gray;
 	color: #787778;
 	font-size: 1.5rem;
@@ -47,14 +33,14 @@ h1 {
 .input-button {
    border: 3px solid white;
    background-color: #7CBF94;
-   padding: 0px 22px 12px 22px;;
+   padding-top: 20px;
    border-radius: 50%;
    color: white;
-   vertical-align: middle;
-   font-size: 71px;
-   font-weight: 700;
    box-shadow: 2px 2px 3px gray;
-   margin-bottom: 13px;
+   margin-right: 1em;
+   width: 5em;
+   height: 4em;
+   display: inline-block;
    }
 
    .input-button:focus, #add-input, .items-button{
@@ -79,25 +65,36 @@ h1 {
 	box-shadow: 2px 4px 5px gray;
 	color: #787778;
 	background-color: white;
-	margin: 0 -21px -26px -17px;
+	  margin: 0px -19px -9px -21px;
 }
 
 /*item-button styles*/
-.items-button {
+.item-button {
     border: 3px solid white;
     background-color: #7AB3CE;
-   padding: 45px 45px;
+   padding-top: 16px;
    border-radius: 50%;
-   font-weight: 700;
    box-shadow: -4px 5px 5px gray;
    position: relative;
-   margin-left: -3.75em;
+   width: 5em;
+   height: 4em;
+   display: inline-block;
+   color: white;
+     margin: 15px 2px 3px -124px;
    }
 
-.circle-o, .complete {
-	color: white;
-	position: absolute;
-	margin: -80px 0 0 -7px;
+.item-button-complete {
+	border: 3px solid white;
+	background-color: #D27752;
+   padding-top: 16px;
+   border-radius: 50%;
+   box-shadow: -4px 5px 5px gray;
+   position: relative;
+   width: 5em;
+   height: 4em;
+   display: inline-block;
+   color: white;
+     margin: 15px 2px 3px -90px;
 }
 /*.items-button:hover {
    background: #6492A8;
@@ -149,14 +146,14 @@ h1 {
    background: #D27752;
    }*/
 
-/*.list-item,*/ .complete {
+/*.list-item,*/ .complete, .item-button-complete {
 	display: none;
 }
 
 .trashcan {
 	color: #787778;
 	position: absolute;
-	  padding: 15px 0 0 34px;
+	  padding: 27px 0 0 34px;
 }
 
 hr { 
