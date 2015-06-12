@@ -24,11 +24,27 @@ $(document).ready(function() {
 //     $(this).html('<i class="list-item-complete fa fa-check fa-3x"></i>');
 // });
 
+    $('.item-button').mouseenter(function() {
+    $(this).css('cursor', 'pointer');
+    $(this).css('background-color', '#D27752');
+    $(this).html('<i class="list-item-complete fa fa-check fa-3x"></i>');
+
+$('.item-button').mouseleave(function() {
+    $('.item-button').css('background-color', '#7AB3CE');
+    $(this).html('<i class="fa fa-bars fa-3x"></i>');
+  })
+
     $('.item-button').click(function() {
      $(this).css('background-color', '#D27752');
     $('.show-item').css('border-color', '#D27752');
     $(this).html('<i class="list-item-complete fa fa-check fa-3x"></i>');
     $('.show-item').css('text-decoration', 'line-through');
+    $(this).toggleClass('.item-button');
+
+ 
+
+  }) 
+
 })
 
 
@@ -40,7 +56,18 @@ $(document).ready(function() {
     $(this).css('background-color', '#7AB3CE');
     $('.input-button').css('color', '#787778');
     $('.input-button').css('cursor', 'pointer');
+  })
+
+    .mouseleave(function() {
+    $('.item-button').css('background-color', '#7AB3CE');
+    $('.show-item').css('border-color', '#7AB3CE');
+    $(this).html('<i class="fa fa-bars fa-3x"></i>');
   })      
+
+  $('.trashcan').mouseenter(function() {
+    $('.trashcan').css('cursor', 'pointer');
+  })    
+
 
   .mouseleave(function() {
     $('.input-button').css('background-color', '#7CBF94');
@@ -52,6 +79,14 @@ $(document).ready(function() {
 
   .mouseup(function() {
   });
+
+  var el = $('');
+
+          $("k.trashcan").append(el);
+
+           $('.trashcan').mouseenter(function() {
+    $('.trashcan').css('cursor', 'pointer');
+  })    
 
     $('.item-button').mouseenter(function() {
     $(this).css('cursor', 'pointer');
