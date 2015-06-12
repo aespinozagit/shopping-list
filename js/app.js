@@ -1,8 +1,39 @@
 $(document).ready(function() {
 
-  $(".input-button").click(function(){
-            alert($('#add-input').val());
-            $(".show-item").append($('#add-input'));
+           $('.input-button').click(function() {
+    if( $('input#add-input').val().trim().length == 0 ) {
+        // alert("put something here");
+        $('#error').show();
+        $('input#add-input').val("");
+    } else { 
+
+    $('ul').append('<li class="show-item">' + $('input#add-input').val() + '</li>');
+    $('ul').append('<div class="item-button"><i class="fa fa-bars fa-3x"></i></div>');
+    $('ul').append('<i class="fa fa-trash fa-4x trashcan"></i>');
+    $('input#add-input').val("");
+    $('#error').hide();
+    $('.item-list').css('display', 'inline-block');
+
+    var el = $('');
+
+          $("ul").append(el);
+
+// el.click(function(){
+//   $(this).css('background-color', '#D27752');
+//     $('.show-item').css('border-color', '#D27752');
+//     $(this).html('<i class="list-item-complete fa fa-check fa-3x"></i>');
+// });
+
+    $('.item-button').click(function() {
+     $(this).css('background-color', '#D27752');
+    $('.show-item').css('border-color', '#D27752');
+    $(this).html('<i class="list-item-complete fa fa-check fa-3x"></i>');
+    $('.show-item').css('text-decoration', 'line-through');
+})
+
+
+    };  
+  
         });
 
   $('.input-button').mouseenter(function() {
@@ -36,11 +67,6 @@ $(document).ready(function() {
     $(this).html('<i class="fa fa-bars fa-3x"></i>');
   })
 
-$('.item-button').click(function() {
-     $(this).css('background-color', '#D27752');
-    $('.show-item').css('border-color', '#D27752');
-    $(this).html('<i class="list-item-complete fa fa-check fa-3x"></i>');
-})
 
   .mousedown(function() {
 
@@ -63,35 +89,6 @@ $('.item-button').click(function() {
   .mouseup(function() {
   });
 
-  $('#add-button').click(function() {
-    if( $('input#add-todo').val().trim().length == 0 ) {
-        // alert("put something here");
-        $('#error').show();
-        $('input#add-todo').val("");
-    } else { 
-
-    $('ul').append('<li class="todo"><button class="item">Done</button>' + $('input#add-todo').val() + '</li>');
-    $('input#add-todo').val("");
-    $('#error').hide();
-
-    };  
+  
   
   });
-
-
-    $(document).keydown(function(e) {
-    if (e.keyCode == 88) {
-    	playCool();
-      $('.ryu-ready').hide();
-      $('.ryu-still').hide();
-      $('.ryu-cool').show();
-    }   
-  }).keyup(function(e) {
-    if (e.keyCode == 88) {
-      $('#cool-sound')[0].pause();
-      $('#cool-sound')[0].load();
-      $('.ryu-cool').hide();
-      $('.ryu-still').show();
-    }
-  });
-});
