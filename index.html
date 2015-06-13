@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
 	<script src="js/app.js"></script>
 
@@ -20,24 +21,18 @@
 
 	<h1>SHOPPING LIST</h1>
 
-	<div class="item-input">
-		<input id="add-input" type="text" name="add-item" placeholder="ENTER ITEM HERE" autocomplete="off">
 
-		<div class="input-button"><i class="fa fa-plus fa-3x"></i></div>
+	<div class="item-input">
+		<input id="add-input" placeholder="ENTER ITEM HERE">
+
+		<button type="submit" id="add-button"><i class="fa fa-plus fa-3x"></i></button>
+
 		<div id="error">
 			<p>ENTER ITEM ABOVE!!!</p>
-		</div>
+		</div>		
 	</div>
-
-	<div class="item-list">
-				<ul>
-					<!-- <div class="item-button"><i class="fa fa-bars fa-3x"></i></div>
-				    <li class="show-item"></li>
-					
-				    <i class="fa fa-trash fa-4x trashcan"></i> -->
-				</ul>
-		
-	</div>
-
+	
+		<ul id="item-list"></ul>
+	
 </body>
 </html>
