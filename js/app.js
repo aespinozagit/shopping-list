@@ -26,14 +26,7 @@ $('#add-button').mouseenter(function() {
 	    $('ul').append('<li class="show-item">' + $('input#add-input').val() + ' </li><button class="item-button"><i class="fa fa-bars fa-3x"></i></button><button class="trashcan" type="submit"><i class="fa fa-trash fa-4x"></i></button>');
 	    $('input#add-input').val("");
 	    $('#error').hide();
-	};
-
-
-//delete list items
-	$('.trashcan').click(function(e) {
-		e.preventDefault();
-     $("#item-list").children().remove();
-	});
+	}
 
 // cross off list items
 	$('#item-list').click (function(){
@@ -41,15 +34,20 @@ $('#add-button').mouseenter(function() {
 		$('.item-button').toggleClass('background');
 		$('.show-item').toggleClass('border');
 		$('.item-button').html($('.item-button').html() == '<i class="fa fa-bars fa-3x"></i>' ? '<i class="fa fa-check fa-3x"></i>' : '<i class="fa fa-bars fa-3x"></i>');
- })
+ });
 
+//delete list items
+	$('.trashcan').click(function(e) {
+		e.preventDefault();
+     $("#item-list").children().remove();
+	})
 
 //sortable list items
 	$(function() {
     $( "#item-list" ).sortable();
     $( "#item-list" ).disableSelection();
-  });
-});
+  })
+})
 });
 
 
