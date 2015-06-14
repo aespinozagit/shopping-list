@@ -10,13 +10,13 @@ $('#add-button').mouseenter(function() {
  .mouseleave(function() {
     $('#add-button').css('background-color', '#7CBF94');
     $('#add-button').css('color', 'white');
-  })
+  });
 
 //add list items
 	$('#add-button').click(function(e) {
 		e.preventDefault();
 
-    if ($('input#add-input').val().trim().length == 0 ) {
+    if ($('input#add-input').val().trim().length === 0 ) {
         // alert("put something here");
         $('#error').show();
         $('input#add-input').val("");
@@ -40,14 +40,12 @@ $('#add-button').mouseenter(function() {
 	$('.trashcan').click(function(e) {
 		e.preventDefault();
      $("#item-list").children().remove();
-	})
+	});
 
 //sortable list items
 	$(function() {
     $( "#item-list" ).sortable();
     $( "#item-list" ).disableSelection();
-  })
-})
+  });
 });
-
-
+});
