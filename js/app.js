@@ -23,24 +23,32 @@ $('#add-button').mouseenter(function() {
     } 
 
     else { 
-	    $('ul').append('<li class="show-item">' + $('input#add-input').val() + ' </li><button class="item-button"><i class="fa fa-bars fa-3x"></i></button><button class="trashcan" type="submit"><i class="fa fa-trash fa-4x"></i></button>');
+	    $('ul').append('<li class="show-item">' + $('input#add-input').val() + '<button class="item-button"><i class="fa fa-bars fa-2x"></i></button><button class="trashcan" type="submit"><i class="fa fa-trash fa-2x"></i></button></li>');
 	    $('input#add-input').val("");
 	    $('#error').hide();
 	}
 
 // cross off list items
-	$('#item-list').click (function(){
-		$('.show-item').toggleClass('strike');
-		$('.item-button').toggleClass('background');
-		$('.show-item').toggleClass('border');
-		$('.item-button').html($('.item-button').html() == '<i class="fa fa-bars fa-3x"></i>' ? '<i class="fa fa-check fa-3x"></i>' : '<i class="fa fa-bars fa-3x"></i>');
- });
+$('#item-list').on('click', 'li', function(){
+  $(this).toggleClass('strike');
+  $('.item-button').toggleClass('background');
+  $(this).toggleClass('border');
+});
+	// $('#item-list').click (function(){
+	// 	$('.show-item').toggleClass('strike');
+	// 	$('.item-button').toggleClass('background');
+	// 	$('.show-item').toggleClass('border');
+	// 	$('.item-button').html($('.item-button').html() == '<i class="fa fa-bars fa-3x"></i>' ? '<i class="fa fa-check fa-3x"></i>' : '<i class="fa fa-bars fa-3x"></i>');
+ // });
 
 //delete list items
-	$('.trashcan').click(function(e) {
-		e.preventDefault();
-     $("#item-list").children().remove();
-	});
+    $(document).on("click", "button.trashcan", function(){
+        $( this ).parent().remove();
+    });
+	// $('.trashcan').click(function(e) {
+	// 	e.preventDefault();
+ //     $("#item-list").children().remove();
+	// });
 
 //sortable list items
 	$(function() {
