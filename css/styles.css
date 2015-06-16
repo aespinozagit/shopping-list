@@ -35,46 +35,31 @@ h1 {
 .item-button {
 	border: 3px solid white;
 	background-color: #7AB3CE;
-<<<<<<< HEAD
 	padding-top: 16px;
-=======
->>>>>>> b4227131b334ed71f4bfa5676647e9a76601dcdb
 	border-radius: 50%;
 	box-shadow: -4px 5px 5px gray;
 	position: absolute;
 	width: 3em;
-<<<<<<< HEAD
 	height: 2.5em;
 	display: inline-block;
 	color: white;
-	margin: -28px 0 0 -96px;
-=======
-	height: 3em;
-	display: inline-block;
-	color: white;
-	margin: -28px 0 0 -242px;
->>>>>>> b4227131b334ed71f4bfa5676647e9a76601dcdb
+	margin: -21px 0 0 -81px;
 	outline: none;
 	cursor: pointer;
    }
-/*
+
 .item-button:hover {
 	background: #D27752;
 }
 
 .item-button:active {
 	background: #D27752;
-}*/
+}
 
 /*trashcan button*/
 .trashcan {
 	color: #787778;
-<<<<<<< HEAD
-	margin: -125px 0px 0px 132px;
-=======
-	position: absolute;
-	margin: -7px 0px 0px 107px;
->>>>>>> b4227131b334ed71f4bfa5676647e9a76601dcdb
+	margin: -3px 0px 0px 237px;
 	border: none;
 	background: none;
 	outline: none;
@@ -104,10 +89,13 @@ h1 {
 	box-shadow: 2px 4px 5px gray;
 	color: #787778;
 	background-color: white;
-	font-size: 2em;
+	font-size: 1.75em;
 	margin: 2em auto;
 }
-
+ .show-item span {
+ 	position: absolute;
+ 	margin: -47px 0 0 -87px;	
+ }
 /*Toggle styles*/
 .strike {
 	text-decoration: line-through;
@@ -121,7 +109,6 @@ h1 {
 .background {
 	background-color: #D27752;
 	outline: none;
-  background-image: url('../img/symbol_check.png');
 }
 
 hr { 
