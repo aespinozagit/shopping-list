@@ -35,16 +35,17 @@ h1 {
 .item-button {
 	border: 3px solid white;
 	background-color: #7AB3CE;
-	padding-top: 1px;
+	padding-top: 16px;
 	border-radius: 50%;
 	box-shadow: -4px 5px 5px gray;
 	position: absolute;
-	width: 6em;
-	height: 6em;
+	width: 3em;
+	height: 2.5em;
 	display: inline-block;
 	color: white;
-	margin: -138px 0 0 -212px;
+	margin: -28px 0 0 -96px;
 	outline: none;
+	cursor: pointer;
    }
 
 .item-button:hover {
@@ -58,7 +59,6 @@ h1 {
 /*trashcan button*/
 .trashcan {
 	color: #787778;
-	position: absolute;
 	margin: -125px 0px 0px 132px;
 	border: none;
 	background: none;
@@ -84,7 +84,7 @@ h1 {
 	border-radius: 7px;
 	height: 3rem;
 	list-style-type: none;
-	width: 251px;
+	width: 230px;
 	z-index: -4;
 	box-shadow: 2px 4px 5px gray;
 	color: #787778;

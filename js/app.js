@@ -13,34 +13,51 @@ $('#add-button').mouseenter(function() {
   });
 
 //add list items
-	$('#add-button').click(function(e) {
-		e.preventDefault();
+$('#add-button').click(function(){
+		var txtbox = document.getElementById('add-input');
+		var txtval = txtbox.value;
+		event.preventDefault();
 
-    if ($('input#add-input').val().trim().length === 0 ) {
-        // alert("put something here");
-        $('#error').show();
-        $('input#add-input').val("");
-    } 
+		if(!$.trim($('#add-input').val())) {
+			$('#error').show();
+		} else {
+			$('<li class="show-item"></li>').appendTo('#item-list').html('<div class="item-button"><i class="fa fa-bars fa-2x"></i></div><button class="trashcan"><i class="fa fa-trash fa-2x"></i></button><span>' + txtval + '</span>');
 
-    else { 
-	    $('ul').append('<li class="show-item">' + $('input#add-input').val() + ' </li><button class="item-button"><i class="fa fa-bars fa-3x"></i></button><button class="trashcan" type="submit"><i class="fa fa-trash fa-4x"></i></button>');
-	    $('input#add-input').val("");
-	    $('#error').hide();
-	}
+		document.getElementById('add-input').value = '';
+		}
+	});
+	// $('#add-button').click(function(e) {
+	// 	e.preventDefault();
+
+ //    if ($('input#add-input').val().trim().length === 0 ) {
+ //        // alert("put something here");
+ //        $('#error').show();
+ //        $('input#add-input').val("");
+ //    } 
+
+ //    else { 
+	//     $('ul').append('<li class="show-item">' + $('input#add-input').val() + '<button class="item-button"><i class="fa fa-bars fa-3x"></i></button><button class="trashcan" type="submit"><i class="fa fa-trash fa-2x"></i></button></li>');
+	//     $('input#add-input').val("");
+	//     $('#error').hide();
+	// }
 
 // cross off list items
-	$('#item-list').click (function(){
-		$('.show-item').toggleClass('strike');
-		$('.item-button').toggleClass('background');
-		$('.show-item').toggleClass('border');
-		$('.item-button').html($('.item-button').html() == '<i class="fa fa-bars fa-3x"></i>' ? '<i class="fa fa-check fa-3x"></i>' : '<i class="fa fa-bars fa-3x"></i>');
- });
+$('#item-list').on('click', 'li', function(){
+	$(this).toggleClass('strike'); 
+	$(this).children('.item-button').toggleClass('background');
+});
+	// $('#item-list').click(function(){
+	// 	$('.show-item').toggleClass('strike');
+	// 	$('.item-button').toggleClass('background');
+	// 	$('.show-item').toggleClass('border');
+	// 	$('.item-button').html($('.item-button').html() == '<i class="fa fa-bars fa-3x"></i>' ? '<i class="fa fa-check fa-3x"></i>' : '<i class="fa fa-bars fa-3x"></i>');
+ // });
 
 //delete list items
-	$('.trashcan').click(function(e) {
-		e.preventDefault();
-     $("#item-list").children().remove();
-	});
+ $(document).on("click", "button.trashcan", function(){
+        $( this ).parent().remove();
+    });
+
 
 //sortable list items
 	$(function() {
@@ -48,4 +65,4 @@ $('#add-button').mouseenter(function() {
     $( "#item-list" ).disableSelection();
   });
 });
-});
+// });
