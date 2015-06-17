@@ -20,10 +20,13 @@ $('#add-button').click(function(){
 
 		if(!$.trim($('#add-input').val())) {
 			$('#error').show();
+
 		} else {
 			$('<li class="show-item"></li>').appendTo('#item-list').html('<div class="item-button"><i class="fa fa-bars fa-2x"></i></div><button class="trashcan"><i class="fa fa-trash fa-2x"></i></button><span>' + txtval + '</span>');
+			$('#error').hide();
 
 		document.getElementById('add-input').value = '';
+
 		}
 	});
 
