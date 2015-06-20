@@ -33,8 +33,9 @@ $('#add-button').click(function(){
 
 // cross off list items
 $('#item-list').on('click', 'li', function(){
-	$(this).toggleClass('strike').toggleClass('border'); 
+	$(this).toggleClass('border'); 
 	$(this).children('.item-button').toggleClass('background');
+	$(this).children('span').toggleClass('strike');
 });
 	// $('#item-list').click(function(){
 	// 	$('.show-item').toggleClass('strike');
